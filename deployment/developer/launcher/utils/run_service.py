@@ -19,7 +19,6 @@ for module, service, options, suffix in MOSIP_SERVICES:
         jar_name = get_jar_name(service, MOSIP_VERSION) 
         kill_process(jar_name)
         start_service(module, service, MOSIP_VERSION, options, suffix) 
-        break
 
 if not found:
     print('%s not found' % service_to_run)
